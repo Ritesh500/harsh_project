@@ -24,6 +24,20 @@
 .DS_Store
 *.pem
 
+# local subscriber data (file-based store for the coming-soon phase)
+/data
+
+# database
+*.db
+*.db-journal
+/prisma/*.db
+
+# generated prisma client
+/src/generated
+
+# user-uploaded product images
+/public/uploads
+
 # debug
 npm-debug.log*
 yarn-debug.log*
