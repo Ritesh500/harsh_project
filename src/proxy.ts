@@ -3,7 +3,7 @@ import { SESSION_COOKIE, verifyToken } from "@/lib/auth";
 
 const MUTATING = new Set(["POST", "PATCH", "PUT", "DELETE"]);
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const token = req.cookies.get(SESSION_COOKIE)?.value;
   const authed = await verifyToken(token);
